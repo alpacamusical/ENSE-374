@@ -4,19 +4,28 @@ public class LinkList {
 	private ListElement head;
 	private ListElement tail;
 	
+	LinkList(){
+		this.head = this.tail = null;
+	}
+	
 	public void addElement(ListElement le) {
 	
 		if (head==null) {
 			head = le;
 			tail = le;
+			
+			head.setPrevious(null);
+			tail.setNext(null);
+			
 		}
 		
 		else {
 			tail.setNext(le);
 			le.setPrevious(tail);
+			
+			tail = le;
+			tail.setNext(null);
 		}
-		tail =le;
-		
 	}
 	
 	public ListElement getElement(int index) {

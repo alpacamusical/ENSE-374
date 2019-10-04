@@ -23,6 +23,8 @@ public class Main {
 		list.printLinkedListTail(list);
 		
 		list.deleteElement(1);
+		
+		list.printLinkedListHead(list);
 	}
 
 }
