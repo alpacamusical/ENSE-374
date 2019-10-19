@@ -26,10 +26,16 @@ public class SavingsAccount {
 		this.savingsBalance = savBal;
 	}
 	
+	/**
+	 * monthly interest gains
+	 */
 	public void monthlyInterest(){
 		float calculation = ((getAnnualInterestRate()/12) * getSavingsBalance()) + getSavingsBalance();
 		setSavingsBalance(calculation);
 	}
+	/**
+	 * biweekly interest gains
+	 */
 	public void biweeklyInterest(){
 		float calculation = ((getAnnualInterestRate()/24) * getSavingsBalance()) + getSavingsBalance();
 		setSavingsBalance(calculation);

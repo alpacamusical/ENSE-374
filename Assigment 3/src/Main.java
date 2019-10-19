@@ -2,9 +2,15 @@ import java.util.*;
 public class Main {
 
 	public static void main(String[] args) {
+		/**
+		 * user needs to answer questions
+		 */
 		Account acc1 = new Account();
         acc1.chooseAccount();
         
+        /**
+         * the user receives an example of a Savings account with $500 
+         */
         System.out.println("\n\nExample of SavingsAccount with an opening balance of $500: ");
         
         SavingsAccount saver1 = new SavingsAccount(500);
@@ -17,7 +23,9 @@ public class Main {
 				String compound = scanner.nextLine();
 				System.out.println(compound);
 				if(compound.equals("monthly")){
-					//Monthly compound method for saver 1
+					/**
+					 * Monthly compound method for saver 1
+					 */
 					System.out.println("\nThe savings balance for account 1 is: " + saver1.getSavingsBalance() + "$");
 					for(int i=1; i<13; i++){
 						saver1.monthlyInterest();
@@ -27,7 +35,9 @@ public class Main {
 				b =true;
 		
 				} else if(compound.equals("biweekly")){
-					//biweekly compound method for saver 1
+					/**
+					 * biweekly compound method for saver 1
+					 */
 					System.out.println("\nThe savings balance for account 1 is: " + saver1.getSavingsBalance() + "$");
 					for(int i=1; i<25; i++){
 						saver1.biweeklyInterest();
@@ -36,7 +46,9 @@ public class Main {
 					System.out.println("Total savings balance after 1 year: " + saver1.getSavingsBalance() + "$");
 					b = true;
 				} else {
-					//validation, user needs to choose monthly or biweekly method
+					/**
+					 * validation, user needs to choose monthly or biweekly method
+					 */
 					System.out.println("Try again!");
 				}	
 		} while (!b); 

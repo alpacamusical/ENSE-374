@@ -45,14 +45,20 @@ public class Account {
 	public void setMaintenance(double maintenance) {
 		this.maintenance = maintenance;
 	}
-    
+    /**
+     * method for deciding which account to open
+     */
 	public void chooseAccount() {
-	
 	    
-	    //questions to decide for an account
+	    /**
+	     * questions to decide for an account
+	     */
 		System.out.println("Do you need unlimited withdrawall?: ");
 		boolean loop = false;
 		do {
+			/**
+			 * all questions are yes or no answers
+			 */
 			Scanner userInput1 = new Scanner(System.in);
 			String question1 = userInput1.nextLine();
 		    if(question1.equals("yes")) {
